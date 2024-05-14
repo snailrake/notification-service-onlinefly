@@ -1,0 +1,27 @@
+spring:
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: noreplyonlinefly@yandex.ru
+    password: snopyhntzanrlhsr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connection-timeout: 5000
+          timeout: 5000
+          write-timeout: 5000
+
+  data:
+    kafka:
+      port: 9092
+      host: localhost
+      group-id: notification_service
+      channels:
+        fly-channel:
+          name: fly_event_channel
+
+server:
+  port: 8083
